@@ -13,7 +13,7 @@
               <h2 class="todo-card__title">{{ todo.title }}</h2>
             </div>
             <ul class="todo-card__list">
-              <li v-for="item in todo.tasks.slice(0, 3)" :key="item.label">
+              <li v-for="item in todo.tasks" :key="item.label">
                 <CheckboxIcon :checked="item.done"/>
                 <span :class="item.done ? 'line-through' : ''">
                   {{ item.label }}
@@ -201,6 +201,7 @@ export default class TodoList extends Vue {
       display: flex
       flex-wrap: wrap
       justify-content: center
+      margin-top: auto
       margin-left: -5px
       margin-right: -5px
 
